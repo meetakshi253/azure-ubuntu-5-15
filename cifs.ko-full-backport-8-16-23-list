@@ -1,0 +1,458 @@
+da531277a9a0 smb: client: fix null auth
+0cd9765b1226 smb3: display network namespace in debug information
+1bff2231e224 cifs: Release folio lock on fscache read hit.
+307ffde75f50 cifs: fix potential oops in cifs_oplock_break
+7a0897201932 smb: client: fix dfs link mount against w2k8
+73399400c2c0 cifs: add missing return value check for cifs_sb_tlink
+1b6339ca4c49 smb3: do not set NTLMSSP_VERSION flag for negotiate not  auth request
+01b1014d5a22 cifs: allow dumping keys for directories too
+942ac041f21c cifs: update internal module version number for cifs.ko
+dcecf18f8853 cifs: fix mid leak during reconnection after timeout threshold
+0b7995fd0945 smb: client: fix missed ses refcounting
+6bc4616dbaf8 smb: client: Fix -Wstringop-overflow issues
+3ad4c62eece6 cifs: if deferred close is disabled then close files immediately
+3f12c77335e9 smb: client: remove redundant pointer 'server'
+fd6fa6290ca9 cifs: fix session state transition to avoid use-after-free issue
+1f9b999b345a cifs: new dynamic tracepoint to track ses not found errors
+704130b438bf cifs: log session id when a matching ses is not found
+4940571a24f3 smb: client: improve DFS mount check
+414c209821af smb: client: fix shared DFS root mounts with different prefixes
+afe7399c0514 smb: client: fix parsing of source mount option
+c407a540c1c8 smb: client: fix broken file attrs with nodfs mounts
+35143db8e6d1 cifs: print client_guid in DebugData
+09b10cd0204b cifs: fix session state check in smb2_find_smb_ses
+0de71d4a3586 cifs: fix session state check in reconnect to avoid  use-after-free issue
+e77157350768 cifs: do all necessary checks for credits within or before locking
+1ef0b03fb5c9 cifs: prevent use-after-free by freeing the cfile later
+7b1438fbb5cb smb: client: fix warning in generic_ip_connect()
+ca94b3d37a97 smb: client: fix warning in CIFSFindNext()
+bbf5e3e74641 smb: client: fix warning in CIFSFindFirst()
+8a1fc911928b smb3: do not reserve too many oplock credits
+41af1e079d1e cifs: print more detail when invalidate_inode_mapping fails
+0f7c904b8d32 smb: client: fix warning in cifs_smb3_do_mount()
+72507dfd0d9d smb: client: fix warning in cifs_match_super()
+a8db3245dd31 cifs: print nosharesock value while dumping mount options
+ca9a0ea0e3e8 SMB3: Do not send lease break acknowledgment if all  file handles have been closed
+e21b491a8606 cifs: add a warning when the in-flight count goes negative
+c7a501366b9c cifs: fix lease break oops in xfstest generic/098
+d1602cb8de61 cifs: fix max_credits implementation
+842544557f5f cifs: fix sockaddr comparison in iface_cmp
+40acd384735c smb/client: print "Unknown" instead of bogus link speed value
+81a819c4c96e cifs: print all credit counters in DebugData
+99b05ba60e75 cifs: fix status checks in cifs_tree_connect
+5a87cc7a7b12 smb: remove obsolete comment
+ee21164bbfae cifs: address unused variable warning
+dda69fa02da6 smb: delete an unnecessary statement
+520506d3ba04 smb3: missing null check in SMB2_change_notify
+e76e35342205 cifs: mapchars mount option ignored
+6e562c90cea7 smb3: display debug information better for encryption
+63a8e5d34b8f cifs: fix smb1 mount regression
+897118ac4697 SMB3: drop reference to cfile before sending oplock break
+a8795d0d3dd5 SMB3: Close all deferred handles of inode in case of handle lease break
+1487345eff49 cifs: release leases for deferred close handles when freezing
+f508794cc6ad smb3: fix problem remounting a share after shutdown
+9e3fd3be5799 SMB3: force unmount was failing to close deferred close files
+89c3160c1499 smb3: improve parallel reads of large files
+a3eeaa950b61 do not reuse connection if share marked as isolated
+c5772f9aa180 cifs: fix pcchunk length type in smb2_copychunk_range
+251726950d7d cifs: fix sharing of DFS connections
+43c9de22f6a9 cifs: avoid potential races when handling multiple dfs tcons
+569ac6e56c72 cifs: protect access of TCP_Server_Info::{origin,leaf}_fullpath
+9279009de8cd cifs: fix potential race when tree connecting ipc
+79930bd03bf2 cifs: fix potential use-after-free bugs in TCP_Server_Info::hostname
+4b4acdfb7716 cifs: print smb3_fs_context::source when mounting
+7bf8bc0fd38e cifs: protect session status check in smb2_reconnect()
+e2977cc6a66e SMB3.1.1: correct definition for app_instance_id create contexts
+7fb9254d79f2 cifs: update internal module version number for cifs.ko
+72fd9489e156 smb3: move some common open context structs to smbfs_common
+18d6e74d1818 smb3: make query_on_disk_id open context consistent and move to common code
+7b36e2affcc2 SMB3.1.1: add new tree connect ShareFlags
+41386732a58d cifs: missing lock when updating session status
+90fb418264c5 SMB3: Close deferred file handles in case of handle lease break
+2a7d00de75cd SMB3: Add missing locks to protect deferred close file list
+6439e974c744 cifs: Avoid a cast in add_lease_context()
+3b72ff7dd66c cifs: Simplify SMB2_open_init()
+5decb8ce728d cifs: Simplify SMB2_open_init()
+1a912afc887b cifs: Simplify SMB2_open_init()
+7aebb699f73b cifs: avoid dup prefix path in dfs_get_automount_devname()
+b671d47eed14 cifs: fix negotiate context parsing
+73fd216d6e1b cifs: double lock in cifs_reconnect_tcon()
+d7f5565f8c7f cifs: sanitize paths in cifs_update_super_prepath.
+7ad1864f5e4d cifs: get rid of dead check in smb2_reconnect()
+e90e228d8353 cifs: prevent infinite recursion in CIFSGetDFSRefer()
+6fd9822ab7bc cifs: avoid races in parallel reconnects in smb1
+8c0ec73f4c2d cifs: fix DFS traversal oops without CONFIG_CIFS_DFS_UPCALL
+18e479f25eaf smb3: fix unusable share after force unmount failure
+ac437bee26ef cifs: fix dentry lookups in directory handle cache
+1401e545b2b8 smb3: lower default deferred close timeout to address perf regression
+6d418aa111df cifs: fix missing unload_nls() in smb2_reconnect()
+bd791a15fa2d cifs: avoid race conditions with parallel reconnects
+8ce55e6a2fb7 cifs: append path to open_enter trace event
+7f073a7874c1 cifs: print session id while listing open files
+7f0dcdadeaa2 cifs: dump pending mids for all channels in DebugData
+9e68ecfb85b5 cifs: empty interface list when server doesn't support query interfaces
+f42bccba0e64 cifs: do not poll server interfaces too regularly
+4cbe21e26341 cifs: lock chan_lock outside match_session
+c47900c74d3d cifs: check only tcon status on tcon related functions
+bf7383292f85 cifs: use DFS root session instead of tcon ses
+dc9d00ad6d11 cifs: return DFS root session id in DebugData
+3bce285631f3 cifs: fix use-after-free bug in refresh_cache_worker()
+ecd26d94c2ee cifs: set DFS root session in cifs_get_smb_ses()
+7ceebbd7bd76 cifs: generate signkey for the channel that's reconnecting
+3d3273bddb8a cifs: Fix smb2_set_path_size()
+2d2091a8a008 cifs: Move the in_send statistic to __smb_send_rqst()
+0a20039d4e5e cifs: prevent data race in cifs_reconnect_tcon()
+8deb2a59b8f4 cifs: improve checking of DFS links over STATUS_OBJECT_NAME_INVALID
+fe29273c2f60 cifs: reuse cifs_match_ipaddr for comparison of dstaddr too
+b584f3f14ec0 cifs: match even the scope id for ipv6 addresses
+105a11bb5060 update internal module version number for cifs.ko
+400a7a8bb029 cifs: update ip_addr for ses only for primary chan setup
+e79f0fc00609 cifs: use tcon allocation functions even for dummy tcon
+3ef5ca54768f cifs: use the least loaded channel for sending requests
+25b929d54204 cifs: Add a function to read into an iter from a socket
+cd3ad3868100 smb3: Replace smb2pdu 1-element arrays with flex-arrays
+23fd908736ef cifs: get rid of dns resolve worker
+c7c1833d13be cifs: Fix warning and UAF when destroy the MR list
+c2717c0cf20c cifs: Fix lost destroy smbd connection when MR allocate failed
+e218a6060cfe cifs: return a single-use cfid if we did not get a lease
+70dc44b107c2 cifs: Check the lease context if we actually got a lease
+57058257ea5c cifs: Replace remaining 1-element arrays
+59428be295ed cifs: Convert struct fealist away from 1-element array
+fe89772b2361 cifs: fix mount on old smb servers
+51a175f0ebd9 cifs: Fix uninitialized memory reads for oparms.mode
+e27188723f72 cifs: remove unneeded 2bytes of padding from smb2 tree connect
+96cfd2a70c53 cifs: Fix uninitialized memory read in smb3_qfs_tcon()
+d683a5de6cb2 cifs: don't try to use rdma offload on encrypted connections
+e2b6f1bb7c94 cifs: split out smb3_use_rdma_offload() helper
+ba80a1758f2b cifs: introduce cifs_io_parms in smb2_async_writev()
+67f50275f538 cifs: get rid of unneeded conditional in cifs_get_num_sgs()
+40f2b7230672 cifs: prevent data race in smb2_reconnect()
+5962b3059a1d cifs: fix indentation in make menuconfig options
+036fbde3c029 cifs: update Kconfig description
+d0758fef19e5 cifs: Get rid of unneeded conditional in the smb2_get_aead_req()
+38c1bbb5cccf cifs: print last update time for interface list
+263918152c96 cifs: Replace zero-length arrays with flexible-array members
+c5ac3504f351 cifs: Use kstrtobool() instead of strtobool()
+d47d6ede0033 cifs: Fix use-after-free in rdata->read_into_pages()
+4f5337606bf1 cifs: Fix oops due to uncleared server->smbd_conn in reconnect
+a5bfa69b67ff cifs: remove unused function
+7ec641c74a61 cifs: do not include page data when checking signature
+13d50b3c7faa cifs: fix return of uninitialized rc in dfs_cache_update_tgthint()
+fd29fc420b85 cifs: handle cache lookup errors different than -ENOENT
+0da6a6f2ff87 cifs: remove duplicate code in __refresh_tcon()
+0ce880f03817 cifs: don't take exclusive lock for updating target hints
+6726c0deec3a cifs: avoid re-lookups in dfs_cache_find()
+5dcb90eb7409 cifs: fix potential deadlock in cache_refresh_path()
+a6cc6c617e5a cifs: Fix uninitialized memory read for smb311 posix symlink create
+8cd64b002cbc cifs: fix potential memory leaks in session setup
+efca4f592d6e cifs: do not query ifaces on smb1 mounts
+518a5b507220 cifs: fix double free on failed kerberos auth
+db5e06952d68 cifs: remove redundant assignment to the variable match
+042cce9d3ff8 cifs: fix file info setting in cifs_open_file()
+4c21af2669aa cifs: fix file info setting in cifs_query_path_info()
+82d974500b7b cifs: fix interface count calculation during refresh
+f276145d4547 cifs: refcount only the selected iface during interface update
+38e9f0245cee cifs: protect access of TCP_Server_Info::{dstaddr,hostname}
+e1b0e22b3886 cifs: fix race in assemble_neg_contexts()
+89d087e82de5 cifs: ignore ipc reconnect failures during dfs failover
+d47d32857700 cifs: Fix kmap_local_page() unmapping
+1fc490926367 cifs: update internal module number
+563e1a69de3a cifs: don't leak -ENOMEM in smb2_open_file()
+74baec94d892 cifs: use origin fullpath for automounts
+755f3b6488f9 cifs: set correct status of tcon ipc when reconnecting
+48d1345dad7e cifs: optimize reconnect of nested links
+b267f4e9bef6 cifs: fix source pathname comparison of dfs supers
+dce6eca0295c cifs: fix confusing debug message
+802d0c957b5b cifs: don't block in dfs_cache_noreq_update_tgthint()
+a9dea45d657b cifs: refresh root referrals
+06c66f9446b9 cifs: fix refresh of cached referrals
+43707fbc46ca cifs: don't refresh cached referrals from unactive mounts
+4cdda1b527b6 cifs: share dfs connections and supers
+768cb7f48541 cifs: split out ses and tcon retrieval from mount_get_conns()
+84df04fadc1c cifs: set resolved ip in sockaddr
+733febe58389 cifs: remove unused smb3_fs_context::mount_options
+64313769ef5e cifs: get rid of mount options string parsing
+0a5a34b7c5a4 cifs: use fs_context for automounts
+5538134d3eba cifs: reduce roundtrips on create/qinfo requests
+3b04039e11b2 cifs: set correct ipc status after initial tree connect
+ad2539753ec7 cifs: set correct tcon status after initial tree connect
+8d4155c2f38d cifs: Remove duplicated include in cifsglob.h
+3609ec4ac574 cifs: fix oops during encryption
+a6290c7d3e37 cifs: print warning when conflicting soft vs. hard mount options specified
+216386663577 cifs: fix missing display of three mount options
+62beb3f14c56 cifs: fix various whitespace errors in headers
+9a499db3c72f cifs: minor cleanup of some headers
+7fb0c613cbcb cifs: skip alloc when request has no pages
+b3129bc87285 cifs: Parse owner/group for stat in smb311 posix extensions
+b8c3456b7477 cifs: Add "extbuf" and "extbuflen" args to smb2_compound_op()
+209d03f198bb cifs: fix missing unlock in cifs_file_copychunk_range()
+98edc0960a39 cifs: Use after free in debug code
+46fb0a8f5b42 cifs: add check for returning value of SMB2_set_info_init
+af04f65da455 cifs: Fix wrong return value checking when GETFLAGS
+5a357c66fc01 cifs: add check for returning value of SMB2_close_init
+b3463a3e7b04 cifs: Fix connections leak when tlink setup failed
+c1168c1a6ccb cifs: fix use-after-free on the link name
+4d61a925ff6f cifs: avoid unnecessary iteration of tcp sessions
+75b7aba6db41 cifs: always iterate smb sessions using primary channel
+47192fc78710 cred: Do not default to init_cred in prepare_kernel_cred()
+2949679ceb63 cifs: fix use-after-free caused by invalid pointer `hostname`
+0ecda451e92a cifs: Fix pages leak when writedata alloc failed in cifs_write_from_iter()
+54e3775b4899 cifs: Fix pages array leak when writedata alloc failed in cifs_writedata_alloc()
+df763972b6f6 cifs: update internal module number
+a94fe514853e cifs: fix memory leaks in session setup
+daf8b86dda06 cifs: drop the lease for cached directories on rmdir or rename
+c72ffa8e0a96 smb3: interface count displayed incorrectly
+9e561d4facb9 cifs: Fix memory leak when build ntlmssp negotiate blob failed
+63b848cff323 cifs: set rc to -ENOENT if we can not get a dentry for the cached dir
+58ed66d55972 cifs: use LIST_HEAD() and list_move() to simplify code
+acaca7a43721 cifs: Fix xid leak in cifs_get_file_info_unix()
+a624558df8be cifs: Fix xid leak in cifs_ses_add_channel()
+b0f23a58a243 cifs: Fix xid leak in cifs_flock()
+9344231c23bb cifs: Fix xid leak in cifs_copy_file_range()
+df1a4024c491 cifs: Fix xid leak in cifs_create()
+6fc3b442317a smb3: improve SMB3 change notification support
+34d1dca973bd cifs: lease key is uninitialized in two additional functions when smb1
+ebf11c4d0041 cifs: lease key is uninitialized in smb1 paths
+bce656b0af35 smb3: must initialize two ACL struct fields to zero
+ec53f0819842 cifs: fix double-fault crash during ntlmssp
+c22a14818d01 cifs: fix static checker warning
+53986ea3774c cifs: use ALIGN() and round_up() macros
+8434d8da339b cifs: find and use the dentry for cached non-root directories also
+893a44185eec cifs: enable caching of directories for which a lease is held
+178198ab662a cifs: prevent copying past input buffer boundaries
+8c5e89cfcdbf cifs: fix uninitialised var in smb2_compound_op()
+0a4381329c17 cifs: improve symlink handling for smb2+
+7bac3bacec23 smb3: clarify multichannel warning
+9cca2684989a cifs: fix regression in very old smb1 mounts
+c47f1d13e9f4 cifs: fix skipping to incorrect offset in emit_cached_dirents
+d5bd13d64cc7 smb3: fix oops in calculating shash_setkey
+7ff34f78e280 cifs: secmech: use shash_desc directly, remove sdesc
+6f24c7bddfb6 smb3: rename encryption/decryption TFMs
+f8633a0ec4e1 cifs: replace kfree() with kfree_sensitive() for sensitive data
+535a6ad0a50f cifs: remove initialization value
+cb470770db4e cifs: Replace a couple of one-element arrays with flexible-array members
+76eb1f627ef8 smb3: do not log confusing message when server returns no network interfaces
+f1deddf7a9ee smb3: define missing create contexts
+c4ce50d29da1 cifs: store a pointer to a fid in the cfid structure instead of the struct
+c159cbaae732 cifs: improve handlecaching
+0bfa11ccf17d cifs: Make tcon contain a wrapper structure cached_fids instead of cached_fid
+7e7bd8f2408c smb3: add dynamic trace points for tree disconnect
+34a909eba736 Fix formatting of client smbdirect RDMA logging
+f269018777c7 Handle variable number of SGEs in client smbdirect send.
+47f45f2db0ec Reduce client smbdirect max receive segment size
+db42bcde6762 Decrease the number of SMB3 smbdirect client SGEs
+05be570375b5 cifs: Fix the error length of VALIDATE_NEGOTIATE_INFO message
+39ba75e7090d cifs: destage dirty pages before re-reading them for cache=none
+dd329dfa7c2e cifs: return correct error in ->calc_signature()
+5f73fcaac2f9 cifs: misc: fix spelling typo in comment
+8651039f1d00 cifs: update internal module number
+54a5f6212da3 cifs: add missing spinlock around tcon refcount
+e227c121dd10 cifs: always initialize struct msghdr smb_msg completely
+1e8c97182f60 cifs: don't send down the destination address to sendmsg for a SOCK_STREAM
+f99b9b0bf754 cifs: revalidate mapping when doing direct writes
+475b49b03e00 cifs: fix small mempool leak in SMB2_negotiate()
+2ef1e8c01aa5 smb3: use filemap_write_and_wait_range instead of filemap_write_and_wait
+46b2584ffdaf smb3: fix temporary data corruption in insert range
+715faabf4486 smb3: fix temporary data corruption in collapse range
+a773c354b922 smb3: Move the flush out of smb2_copychunk_range() into its callers
+480b3cff017e cifs: Add helper function to check smb1+ server
+abd1141e16b9 cifs: Use help macro to get the mid header size
+1285d27244ba cifs: Use help macro to get the header preamble size
+ebee91fb7962 cifs: skip extra NULL byte in filenames
+62a663ec30a9 smb3: missing inode locks in punch hole
+fe36786ea63a smb3: missing inode locks in zero range
+2267c4c31904 cifs: move from strlcpy with unused retval to strscpy
+74c6ba931328 cifs: Fix memory leak on the deferred close
+79883eb407ad cifs: remove useless parameter 'is_fsctl' from SMB2_ioctl()
+576a62750300 cifs: remove unused server parameter from calc_smb_size()
+c414be3d3268 cifs: Do not access tcon->cfids->cfid directly from is_path_accessible
+188f89c51d8e cifs: Add constructor/destructors for tcon->cfid
+1b3720db35d3 SMB3: fix lease break timeout when multiple deferred close handles for the same file.
+d7e69fe5c802 smb3: allow deferred close timeout to be configurable
+516ebe2981ea cifs: Do not use tcon->cfid directly, use the cfid we get from open_cached_dir
+35235e8833bf cifs: Move cached-dir functions into a separate file
+e50aa4fe136b cifs: fix lock length calculation
+00cdfbb6f653 cifs: update internal module number
+914aa92ef677 cifs: alloc_mid function should be marked as static
+cbf24b1828a1 cifs: remove "cifs_" prefix from init/destroy mids  functions
+c509ceaf00d4 cifs: remove useless DeleteMidQEntry()
+8d57f2cb056d cifs: when insecure legacy is disabled shrink amount of SMB1 code
+8350fc6aba7d cifs: fix wrong unlock before return from cifs_tree_connect()
+a8ac8e0b26f8 cifs: avoid use of global locks for high contention data
+757fc3a68ad5 cifs: remove remaining build warnings
+86fe3acb6026 cifs: list_for_each() -> list_for_each_entry()
+5443d37c2aac smb2: small refactor in smb2_check_message()
+a4d926cf62cc cifs: remove minor build warning
+227ac19d4fd6 cifs: remove some camelCase and also some static build warnings
+d3672c0eb63d cifs: remove unnecessary (void*) conversions.
+7fdd0b08fa6c cifs: remove unnecessary type castings
+fbf3962d2fa4 cifs: remove redundant initialization to variable mnt_sign_enabled
+455cb7292bcd smb3: check xattr value length earlier
+6f5235f8903a smb3: workaround negprot bug in some Samba servers
+d3bd509ef86f cifs: remove unnecessary locking of chan_lock while freeing session
+311fe498673b cifs: fix race condition with delayed threads
+557cfba67762 cifs: update cifs_ses::ip_addr after failover
+6150715c7a9c cifs: avoid deadlocks while updating iface
+5ecd565ff9e6 cifs: periodically query network interfaces from server
+72e1914bb4f4 cifs: during reconnect, update interface if necessary
+e97f86d8ac06 cifs: change iface_list from array to sorted linked list
+a76c082ff78c smb3: use netname when available on secondary channels
+62f53aa84043 smb3: fix empty netname context on secondary channels
+9c994cdc29de cifs: when a channel is not found for server, log its connection id
+2f24eb2d2914 smb3: add trace point for SMB2_set_eof
+fd93e64d0b4b cifs: populate empty hostnames for extra channels
+1f651ccce433 cifs: return errors during session setup during reconnects
+fcb322e5fe89 cifs: fix reconnect on smb3 mount types
+5d5702d0362f cifs: fix uninitialized pointer in error case in dfs_cache_get_tgt_share
+ba32803705aa cifs: skip trailing separators of prefix paths
+26c9a5641c66 cifs: update internal module number
+cfb93b2fd333 cifs: version operations for smb20 unneeded when legacy support disabled
+d83441918a71 cifs: do not build smb1ops if legacy support is disabled
+f7e18768945a cifs: fix potential deadlock in direct reclaim
+5b4d58156615 cifs: when extending a file with falloc we should make files not-sparse
+f4bcbfa4de3a cifs: remove repeated debug message on cifs_put_smb_ses()
+feb1ac17a2d1 cifs: fix potential double free during failed mount
+c9332c390793 smb3: remove unneeded null check in cifs_readdir
+b7a40b014dee cifs: fix ntlmssp on old servers
+13576882d823 cifs: cache the dirents for entries in a cached directory
+6ba4a8e28356 cifs: avoid parallel session setups on same channel
+77ad06c5f8f4 cifs: use new enum for ses_status
+bb638706268c cifs: do not use tcpStatus after negotiate completes
+cacd3275b31a smb3: add mount parm nosparse
+2ed5b60988b8 smb3: don't set rc when used and unneeded in query_info_compound
+91b7914ddb8e smb3: check for null tcon
+5ad7dc699741 cifs: fix minor compile warning
+963577461edd Add various fsctl structs
+a283e5df9b25 Add defines for various newer FSCTLs
+748542cf82fa smb3: add trace point for oplock not found
+7a6a215efe6f cifs: return the more nuanced writeback error on close()
+d3665e4b6cc5 smb3: add trace point for lease not found issue
+4e859ff04c39 cifs: smbd: fix typo in comment
+38b7c0f1a609 cifs: set the CREATE_NOT_FILE when opening the directory in use_cached_dir()
+8999a0ada8c1 cifs: check for smb1 in open_cached_dir()
+1b1b7ecb6d0e cifs: move definition of cifs_fattr earlier in cifsglob.h
+de7ce71e9ae2 cifs: print TIDs as hex
+230872a23509 cifs: return ENOENT for DFS lookup_cache_entry()
+644c84dd38bd cifs: don't call cifs_dfs_query_info_nonascii_quirk() if nodfs was set
+995c4accde04 cifs: fix signed integer overflow when fl_end is OFFSET_MAX
+2dae761b0fbe SMB3: EBADF/EIO errors in rename/open caused by race condition in smb2_compound_op
+e7f16755e7ae cifs: destage any unwritten data to the server before calling copychunk_write
+bc8d18869b6e cifs: use correct lock type in cifs_reconnect()
+679bd37611c3 cifs: fix NULL ptr dereference in refresh_mounts()
+c36cebc19b55 cifs: Use kzalloc instead of kmalloc/memset
+3e12a53ace52 cifs: verify that tcon is valid before dereference in cifs_kill_sb
+2c0235601334 cifs: potential buffer overflow in handling symlinks
+ca8c80a5c7a7 cifs: Split the smb3_add_credits tracepoint
+f4e9c492bac1 cifs: release cached dentries only if mount is complete
+b0e59d7b2c04 cifs: Check the IOCB_DIRECT flag, not O_DIRECT
+1f477a736d69 cifs: update internal module number
+9e9f6e4c2097 cifs: force new session setup and tcon for dfs
+1458faad5e34 cifs: remove check of list iterator against head past the loop body
+117d245a3856 cifs: fix potential race with cifsd thread
+30265d4b8c58 cifs: fix NULL ptr dereference in smb2_ioctl_query_info()
+b0134729dad1 cifs: prevent bad output lengths in smb2_ioctl_query_info()
+6ad58aabbdf4 smb3: fix ksmbd bigendian bug in oplock break, and move its struct to smbfs_common
+7684f65a9fec smb3: cleanup and clarify status of tree connections
+746e784b1b72 smb3: move defines for query info and query fsinfo to smbfs_common
+183a9738ee15 smb3: move defines for ioctl protocol header and SMB2 sizes to smbfs_common
+bc41ebf013df move more common protocol header definitions to smbfs_common
+f8d924e7ccfc cifs: fix incorrect use of list iterator after the loop
+9616f1508f35 cifs: fix bad fids sent over wire
+83cc43c554b8 cifs: change smb2_query_info_compound to use a cached fid, if available
+fd926331d080 cifs: convert the path to utf16 in smb2_query_info_compound
+80597094a639 cifs: do not skip link targets when an I/O fails
+4e41557b1909 cifs: use a different reconnect helper for non-cifsd threads
+843cfcfcbfbb cifs: we do not need a spinlock around the tree access during umount
+efbc62ae7dac Adjust cifssb maximum read size
+cfc734f3fec4 cifs: truncate the inode and mapping when we simulate fcollapse
+74793c719ed1 cifs: fix handlecache and multiuser
+be42d08345b0 smb3: fix incorrect session setup check for multiuser mounts
+c851288fb60c treewide: Replace zero-length arrays with flexible-array members
+df4e055efd67 cifs: fix confusing unneeded warning message on smb2.1 and earlier
+de5649c538bf cifs: modefromsids must add an ACE for authenticated users
+d0b9350c0eea cifs: fix double free race when mount fails in cifs_get_root()
+250a63889347 cifs: do not use uninitialized data in the owner/group sid
+06ef6b8cf9ee cifs: fix set of group SID via NTSD xattrs
+be7c9ac11f78 smb3: fix snapshot mount option
+c90a1dfbc96e cifs: mark sessions for reconnection in helper function
+c82890c3d879 cifs: call helper functions for marking channels for reconnect
+9cf9a3b8172b cifs: call cifs_reconnect when a connection is marked
+13b795c3829a improve error message when mount options conflict with posix
+86e1a14a9190 cifs: fix workstation_name for multiuser mounts
+9af81bd74e7b cifs: unlock chan_lock before calling cifs_put_tcp_session
+5d95d5b09480 Fix a warning about a malformed kernel doc comment in cifs
+292a832b71d1 cifs: update internal module number
+62540beb1476 smb3: send NTLMSSP version information
+1721d7efef3a cifs: cifs_ses_mark_for_reconnect should also update reconnect bits
+347233e9d87f cifs: update tcpStatus during negotiate and sess setup
+68543e84d41a cifs: make status checks in version independent callers
+d3222b45f2eb cifs: remove repeated state change in dfs tree connect
+280a8dc91069 cifs: fix the cifs_reconnect path for DFS
+358a97ffd727 cifs: remove unused variable ses_selected
+e4ff3068ad63 cifs: protect all accesses to chan_* with chan_lock
+cd094d2122a4 cifs: fix the connection state transitions with multichannel
+ec5208098a7f cifs: check reconnects for channels of active tcons too
+825a4cbe55ca smb3: add new defines from protocol specification
+b47220233e07 cifs: serialize all mount attempts
+a22000bc4eab cifs: quirk for STATUS_OBJECT_NAME_INVALID returned for non-ASCII dfs refs
+9e5110a38191 cifs: alloc_path_with_tree_prefix: do not append sep. if the path is empty
+ab18ddf3054d cifs: clean up an inconsistent indenting
+164e268d1818 cifs: free ntlmsspblob allocated in negotiate
+1d8346232c40 cifs: fix FILE_BOTH_DIRECTORY_INFO definition
+f6b29bf7ff7f cifs: move superblock magic defitions to magic.h
+ebeb7410d60c cifs: Fix smb311_update_preauth_hash() kernel-doc comment
+9807e818eb23 cifs: avoid race during socket reconnect between send and recv
+f50e3e39d000 cifs: maintain a state machine for tcp/smb/tcon sessions
+beb856360a17 cifs: fix hang on cifs_get_next_mid()
+998f5b10949e cifs: take cifs_tcp_ses_lock for status checks
+88cceb033d6e cifs: reconnect only the connection and not smb session where possible
+21f04b3816ef cifs: add WARN_ON for when chan_count goes below minimum
+f986f34e5b34 cifs: adjust DebugData to use chans_need_reconnect for conn status
+3cabd317bce4 cifs: use the chans_need_reconnect bitmap for reconnect status
+5be9256835e8 cifs: track individual channel status using chans_need_reconnect
+d1499ee73e56 cifs: remove redundant assignment to pointer p
+ebaa9a8e3fe4 cifs: sanitize multiple delimiters in prepath
+216bb3575b4b cifs: ignore resource_id while getting fscache super cookie
+f0039534588b cifs: fix ntlmssp auth when there is no key exchange
+5c5a48cf69fe cifs: Fix crash on unload of cifs_arc4.ko
+7fad9e5a66ce cifs: avoid use of dstaddr as key for fscache client cookie
+b7236354310c cifs: add server conn_id to fscache client cookie
+f408632d2565 cifs: wait for tcon resource_id before getting fscache super
+65d338f01480 cifs: fix missed refcounting of ipc tcon
+ccdb8f6024cf cifs: update internal version number
+0e035768c232 smb2: clarify rc initialization in smb2_reconnect
+44bdf633736d cifs: populate server_hostname for extra channels
+4e1580018b8a cifs: nosharesock should be set on new server
+9d910cc363c4 cifs: introduce cifs_ses_mark_for_reconnect() helper
+1e93b894075b cifs: protect srv_count with cifs_tcp_ses_lock
+dfbc6ad02975 cifs: move debug print out of spinlock
+48fb46a4a98c cifs: do not duplicate fscache cookie for secondary channels
+e19b6de19848 cifs: connect individual channel servers to primary channel server
+0d0e1f11afc0 cifs: protect session channel fields with chan_lock
+1b56350215d0 cifs: do not negotiate session if session already exists
+6c5d4b316a04 smb3: do not setup the fscache_super_cookie until fsinfo initialized
+a238dd702d07 cifs: fix potential use-after-free bugs
+efdd4dc871c1 cifs: fix memory leak of smb3_fs_context_dup::server_hostname
+a6b5c7c0ad32 smb3: add additional null check in SMB311_posix_mkdir
+1a217fc43ba6 cifs: release lock earlier in dequeue_mid error case
+6aeb6f32aded smb3: add additional null check in SMB2_tcon
+bf5e362adb3f smb3: add additional null check in SMB2_open
+719fd3d99b13 smb3: add additional null check in SMB2_ioctl
+59b7ec076a13 smb3: remove trivial dfs compile warning
+5edb9ba27d04 cifs: support nested dfs links over reconnect
+feca1802d18b smb3: do not error on fsync when readonly
+990c30b9ffda cifs: for compound requests, use open handle if possible
+7f79245bf19d cifs: set a minimum of 120s for next dns resolution
+2fd1763254b7 cifs: split out dfs code from cifs_reconnect()
+8263cbace5d6 cifs: convert list_for_each to entry variant
+b6ddc27d1526 cifs: introduce new helper for cifs_reconnect()
+b92e1b6f6c71 cifs: fix print of hdr_flags in dfscache_proc_show()
+9b0a35a64ee5 cifs: send workstation name during ntlmssp session setup
+dfa9acf5ff0d cifs: nosharesock should not share socket with future sessions
+bd260851292e smb3: add dynamic trace points for socket connection
+b381f524fe49 cifs: Move SMB2_Create definitions to the shared area
+020a81cef700 cifs: Move more definitions into the shared area
+5b3d92ee9a8c cifs: move NEGOTIATE_PROTOCOL definitions out into the common area
+3a7cdc3b2240 cifs: Create a new shared file holding smb2 pdu definitions
+8cf6d7e3c3a5 cifs: add mount parameter tcpnodelay
+b9d0f89d48a3 cifs: To match file servers, make sure the server hostname matches
